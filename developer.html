@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Meme Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+         
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .mute-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 20;
+        }
+        .mute-btn:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Virtox Meme</h1>
+        </div>
+        <div class="header-logo">
+            <img src="Meme/virtox.png" alt="Website Logo" style="height: 50px; align-items: center;">
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="games.html" id="gamesLink">Games</a> <script src="scp.js"> </script>
+                 <a href="about.html">About Us</a>
+                <a href="developer.html">< / ></a>
+            </nav>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <div class="circle"></div>  
+                <script src="toggle.js"></script>
+            
+            </div>
+        </div>
+    </header>
+
+    <div class="video-container">
+        <video id="backgroundVideo" autoplay muted loop>
+            <source src="Meme/Virtox .mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <button class="mute-btn" id="muteBtn">Unmute</button>
+    
+    <script>
+        const video = document.getElementById('backgroundVideo');
+        const muteBtn = document.getElementById('muteBtn');
+
+        muteBtn.addEventListener('click', () => {
+            if (video.muted) {
+                video.muted = false;
+                muteBtn.textContent = 'Mute';
+            } else {
+                video.muted = true;
+                muteBtn.textContent = 'Unmute';
+            }
+        });
+    </script>
+</body>
+</html>
