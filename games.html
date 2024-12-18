@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Meme Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+     </head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Virtox Meme</h1>
+        </div>
+        <div class="header-logo">
+            <img src="Meme/virtox.png" alt="Website Logo" style="height: 50px;">
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="games.html" id="gamesLink">Games</a> <script src="scp.js"></script>
+                <a href="about.html">About Us</a>
+                <a href="developer.html">< / ></a>
+            </nav>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <div class="circle"></div> <script src="toggle.js"></script>
+            </div>
+        </div>
+    </header>
+
+    <main>
+         <div class="search-bar"><link rel="stylesheet" href="ser.css">
+            <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterItems()">
+            <button class="search-button"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="container-wrapper" id="gameContainer">
+            <a href="games/deadshot/deadshot.html" class="nav-container">
+                <img src="games/Gamelogo/deadshot.png" alt="Deadshot">
+                <span>Deadshot</span>
+            </a>
+            <a href="games/bloxd/bloxd.html" class="nav-container">
+                <img src="games/Gamelogo/bloxdio-cover.png" alt="Bloxd">
+                <span>Bloxd</span>
+            </a>
+            <div class="nav-container" onclick="navigate(' ')">
+                <img src="Meme/Coming Soon.png" alt="Page 3">
+                <span>Stay Tuned</span>
+            </div>
+            <div class="nav-container" onclick="navigate(' ')">
+                <img src="Meme/Coming Soon.png" alt="Page 4">
+                <span>Stay Tuned</span>
+            </div>
+        </div>
+    </main>
+
+
+
+
+ <footer>
+        Many Upcoming | Stay Tuned 
+    </footer>
+
+    <script>
+        function navigate(page) {
+            window.location.href = page;
+        }
+        function filterItems() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const gameContainer = document.getElementById('gameContainer');
+            const navContainers = gameContainer.getElementsByClassName('nav-container');
+
+            Array.from(navContainers).forEach(container => {
+                const text = container.innerText.toLowerCase();
+                if (text.includes(searchInput)) {
+                    container.style.display = "flex";
+                } else {
+                    container.style.display = "none";
+                }
+            });
+        }
+    </script>
+    
+     
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadshot.io Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Game Container -->
+    <div class="game-container">
+        <!-- Header -->
+        <div class="game-header">
+            <p>Save your progress with an <span class="highlight">in-game account</span> ❓</p>
+        </div>
+
+        <!-- Game Iframe -->
+        <div class="game-iframe">
+            <iframe 
+    src="https://deadshot.io" 
+    title="Deadshot.io Game" 
+    allow="clipboard-write">
+     </iframe>
+
+    /div>
+
+        <!-- Footer with Controls -->
+        <div class="game-footer">
+            <div class="icons">
+                <button class="game-control" title="Game Controller">
+                    🎮
+                </button>
+
+                <button class="full-screen" title="Full Screen" onclick="toggleFullScreen()">
+                    ⛶
+                </button>
+
+           
+            </div>
+        </div>
+    </div>
+     
+    <!-- Script for Full-Screen and Copy Link -->
+    <script>
+        // Function to enable Full-Screen mode for iframe
+        function toggleFullScreen() {
+            const iframe = document.querySelector("iframe");
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) { // Firefox
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, Opera
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { // IE/Edge
+                iframe.msRequestFullscreen();
+            }
+        }
+
+          // Listen for messages from the iframe
+        window.addEventListener('message', (event) => {
+            if (event.origin === 'https://deadshot.io') {
+                if (event.data.action === 'copyLink') {
+                    navigator.clipboard.writeText(event.data.link).then(() => {
+                        alert('Link copied to clipboard!');
+                    }).catch(err => {
+                        console.error('Failed to copy link:', err);
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtox Games Memes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/<your-kit-id>.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="Meme/virtox.png" alt="Website Logo" style="height: 50px;">
+        </div>
+        <div class="header-left">
+            <h1>Virtox Meme</h1>
+        </div>
+        <div class="header-right">
+            <nav>
+                 
+                <a href="games.html" id="gamesLink">Games</a> <script src="scp.js"></script>
+                <a href="about.html">About Us</a>
+                <a href="developer.html">< / ></a>
+                 
+            </nav>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <div class="circle"></div> <script src="toggle.js"></script>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- First Meme -->
+        <div class="meme-container">
+            <div class="ad-side ad-left">Ad</div>
+            <img src="Blog/CBT.png" alt="Chutiya Banaya Tumko Meme">
+            <div class="ad-side ad-right">Ad</div>
+            <div class="blog-preview blog-content">
+                <h2>"Chutiya Banaya Tumko: A Masterclass in the Art of Sass"</h2>
+                <p>Sometimes, life hands you the perfect moment of snark, and you can’t help but admire the sheer mastery of sarcasm.</p>
+                <h3>A Day in the Life of ‘CBT’ Uncle</h3>
+                <p>Picture this: Uncle starts his day with a perfectly brewed cup of chai. His sharp wit and a no-nonsense attitude are his superpowers. Someone annoys him? BAM! The iconic line, “Chutiya Banaya Tumko,” is delivered flawlessly, leaving everyone stunned.</p>
+                <h3>The Art of Timing</h3>
+                <p>It’s all about perfect timing and delivery. Not everyone can drop a line so potent that it lives rent-free in people’s heads for days.</p>
+            </div>
+            <a class="read-more" onclick="toggleReadMore()">Read More</a>
+        </div>
+
+        <!-- Second Meme -->
+        <div class="meme-container">
+            <div class="ad-side ad-left">Ad</div>
+            <img src="Blog/Eco.jpg" alt="Economics Fail Meme">
+            <div class="ad-side ad-right">Ad</div>
+            <div class="blog-preview blog-content">
+                <h2>"Dekh Raha Hai Binod: Social Media Experts Be Like"</h2>
+                <p>In a world where everyone’s an expert on everything, this meme strikes the perfect balance between humor and reality.</p>
+                <h3>Economics Fail to Budget Genius</h3>
+                <p>Meet the guy who barely passed economics but now passionately debates national budgets on social media. He’s got opinions, and facts are optional.</p>
+                <h3>Why Binod Always Sees It</h3>
+                <p>Binod doesn’t just witness the chaos—he observes and judges silently. As we laugh, we all know a ‘Binod’ in our lives who’s equally amazed.</p>
+            </div>
+            <a class="read-more" onclick="toggleReadMore()">Read More</a>
+        </div>
+
+        <!-- Third Meme -->
+        <div class="meme-container">
+            <div class="ad-side ad-left">Ad</div>
+            <img src="Blog/sharktank1.jpg" alt="Shark Tank India Meme">
+            <div class="ad-side ad-right">Ad</div>
+            <div class="blog-preview blog-content">
+                <h2>"Apun Ko Dhanda Karne Ka Hai: The Shark Tank Effect"</h2>
+                <p>Two episodes of Shark Tank India and suddenly, you’re the next big entrepreneur ready to take over the world.</p>
+                <h3>The Rise of Dhanda Aspirants</h3>
+                <p>Who needs years of research and planning when a weekend binge of business pitches is all it takes to ignite your entrepreneurial spirit?</p>
+                <h3>The Shark Tank Effect</h3>
+                <p>After watching, you find yourself brainstorming business ideas, identifying market gaps, and practicing elevator pitches. You may not know what ‘equity’ means, but “Apun ko dhanda karne ka hai!”</p>
+            </div>
+            <a class="read-more" onclick="toggleReadMore()">Read More</a>
+        </div>
+    </main>
+
+     
+
+    <script  >
+          // Toggle Read More Content
+        function toggleReadMore() {
+            const content = event.target.previousElementSibling;
+            content.classList.toggle('expanded');
+            event.target.textContent = content.classList.contains('expanded') ? 'Read Less' : 'Read More';
+        }
+    </script>
+</body>
+</html>
