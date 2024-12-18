@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadshot.io - Online Gaming</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Deadshot.io</h1>
+        <nav>
+            <a href="#play">Play</a>
+            <a href="#leaderboard">Leaderboard</a>
+            <a href="#community">Community</a>
+        </nav>
+    </header>
+     
+    <section class="hero">
+        <h2>Welcome to Deadshot.io</h2>
+        <p>The ultimate online multiplayer gaming experience.</p>
+        <button onclick="document.getElementById('game').scrollIntoView({behavior: 'smooth'});">Play Now</button>
+        <button onclick="copyInviteLink();">Invite Friends</button>
+    </section>
+
+    <section id="play" class="iframe-container">
+        <iframe 
+    src="https://deadshot.io" 
+    title="Deadshot.io Game" 
+    allow="clipboard-write"
+></iframe>
+
+    </section>
+
+    <footer>
+        &copy; 2024 Deadshot.io | All Rights Reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
