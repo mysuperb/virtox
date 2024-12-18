@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Meme Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Virtox Meme</h1>
+        </div>
+                <div class="header-logo">
+            <img src="Meme/virtox.png" alt="Website Logo" style="height: 50px;align-items: center;" >
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="#price" onclick="navigateTo('price.html')">Price</a>
+                <a href="#research" onclick="navigateTo('research.html')">Research</a>
+            </nav>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h2>Virtox Game</h2>
+        <div class="container-wrapper">
+            <a href="games/deadshot.html" class="nav-container">
+                <img src="Meme/deadshot.png" alt="Image">
+                <span>Image Text</span>
+            </a>
+            </div>
+            <div class="nav-container" onclick="navigate('page2.html')">
+                <img src="https://via.placeholder.com/300x200" alt="Image">
+                <span>Image Text</span>
+            </div>
+            <div class="nav-container" onclick="navigate('page3.html')">
+                <img src="https://via.placeholder.com/300x200" alt="Image">
+                <span>Image Text</span>
+            </div>
+            <div class="nav-container" onclick="navigate('page4.html')">
+                <img src="https://via.placeholder.com/300x200" alt="Image">
+                <span>Image Text</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 My Website. All Rights Reserved.
+    </footer>
+
+    <script>
+        function navigate(page) {
+            window.location.href = page;
+        }
+    </script>
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.body.getAttribute('data-theme');
+            document.body.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+            const toggle = document.querySelector('.theme-toggle');
+            toggle.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+        }
+    
+        function toggleReadMore() {
+            const blogContent = document.getElementById('blog-content');
+            blogContent.classList.toggle('expanded');
+            const readMoreLink = document.querySelector('.read-more');
+            readMoreLink.textContent = blogContent.classList.contains('expanded') ? 'Show Less' : 'Read More';
+        }
+    </script>
+</body>
+</html>

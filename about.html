@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Meme Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Virtox Meme</h1>
+        </div>
+                <div class="header-logo">
+            <img src="Meme/virtox.png" alt="Website Logo" style="height: 50px;align-items: center;" >
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="#price" onclick="navigateTo('price.html')">Price</a>
+                <a href="#research" onclick="navigateTo('research.html')">Research</a>
+            </nav>
+            <div class="theme-toggle" onclick="toggleTheme()">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </header>
+
+     <main>
+        <div class="about-content">
+            <h2>About Virtox Meme</h2>
+            <p>Welcome to Virtox Meme, your daily dose of laughter! We're a team of dedicated meme enthusiasts who scour the internet (and sometimes our own twisted minds) to bring you the funniest, most relatable, and occasionally bizarre memes the web has to offer.</p>
+            <p>Our mission is simple: to brighten your day with a smile (or a full-on belly laugh). We believe that laughter is the best medicine, and memes are the perfect delivery system.</p>
+            <p>Whether you're a seasoned meme connoisseur or a casual browser looking for a quick chuckle, we've got something for you. From classic formats to fresh new trends, we cover the full spectrum of meme-dom.</p>
+            <p>We're always looking for new and exciting content, so if you have a meme you think we'd love, feel free to share it with us! We're also open to feedback and suggestions, so don't hesitate to reach out.</p>
+            <p>Thank you for joining us on this hilarious journey. We hope you enjoy the memes as much as we enjoy finding them (and sometimes making them ourselves!).</p>
+
+            <h3>Connect With Us</h3>
+            <div class="social-links">
+                <a href="https://www.instagram.com/vistox.site/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/vistox.site/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/vistox.site/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy;  
+    </footer>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.body.getAttribute('data-theme');
+            document.body.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+            const toggle = document.querySelector('.theme-toggle');
+            toggle.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+        }
+
+        function toggleReadMore() {
+            // This function is not used on this page but included for consistency if you copy code between pages.
+            // If it causes errors, you can safely remove it from this about.html file.
+            // const blogContent = document.getElementById('blog-content');
+            // blogContent.classList.toggle('expanded');
+            // const readMoreLink = document.querySelector('.read-more');
+            // readMoreLink.textContent = blogContent.classList.contains('expanded') ? 'Show Less' : 'Read More';
+        }
+    </script>
+</body>
+</html>
